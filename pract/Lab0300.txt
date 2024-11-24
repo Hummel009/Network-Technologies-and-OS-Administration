@@ -58,3 +58,10 @@ ip route 74.64.0.0 255.224.0.0 119.105.126.65
 ip route 148.200.0.0 255.255.192.0 134.242.128.1
 
 ip route 199.46.72.96 255.255.255.224 134.242.128.1
+
+
+R6(config)# ip nat inside source static 192.168.86.2 203.0.113.20
+R6(config)# interface G0/2
+R6(config-if)# ip nat inside
+R6(config-if)# interface G0/1
+R6(config-if)# ip nat outside
